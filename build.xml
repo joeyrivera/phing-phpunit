@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="PhingTests" default="tests">
+    <target name="tests">
+        <echo msg="Running unit tests" />
+        <exec executable="./vendor/bin/phpunit" passthru="true" checkreturn="true" />
+        <!-- doesn't seem to work with namespaced versions of phpunit -->
+        <!-- <phpunit codecoverage="false" pharlocation="./vendor/bin/phpunit">
+            <formatter type="plain" usefile="false"/>
+            <batchtest>
+                <fileset dir="./tests/">
+                    <include name="**/*Test*.php"/>
+                </fileset>
+            </batchtest>
+        </phpunit> -->
+    </target>
+</project>
